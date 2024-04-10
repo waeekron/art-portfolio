@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -6,40 +6,52 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
+} from "@/components/ui/card"
+import Image from "next/image"
+import Link from "next/link"
+
+async function getTaidePortfolioData() {
+  const token = process.env.SB_TOKEN
+  const version = process.env.VERSION
+  const url = `https://api.storyblok.com/v2/cdn/stories/art-portfolio?version=${version}&token=${token}`
+  let req = await fetch(url, { cache: "no-store" })
+
+  const storyData = await req.json()
+  /*@ts-ignore*/
+  console.log(storyData)
+  const { artist_statement } = storyData.story.content.body[0]
+  return artist_statement
+}
 
 export default async function TaidePortfolio() {
+  const data = await getTaidePortfolioData()
+  console.log(data)
   return (
     <>
-      <h1 className="text-center  text-2xl font-extrabold uppercase tracking-wider text-zinc-900 md:text-5xl lg:text-6xl">
+      <h1 className="text-center text-2xl font-extrabold uppercase tracking-wider  md:text-5xl lg:text-6xl">
         Taiteilijaportfolio
       </h1>
-      <span className="mt-2 block text-center text-2xl text-zinc-600">
-        Anni Keskipoikela
-      </span>
-
+      <span className="mt-2 block text-center text-2xl">Anni Keskipoikela</span>
       <div className="mt-24 w-full px-4">
         <div className="flex flex-wrap justify-evenly">
-          <div className="flex max-w-lg flex-col items-start justify-start">
-            <h2 className="text-xl font-bold uppercase tracking-widest text-blue-950 underline decoration-double decoration-4 ">
+          <div className="flex flex-col items-start justify-start ">
+            <h2 className="text-xl font-bold uppercase tracking-widest  underline decoration-double decoration-4 ">
               Artist statement
             </h2>
-            <p className="text-md mt-8 max-w-3xl font-medium leading-relaxed">
+            <p className="mt-8 max-w-3xl text-lg leading-relaxed">
               Viime vuodet olen työskennellyt enimmäkseen sekatekniikan parissa.
               Yhdistelen teoksissani esimerkiksi akryylimaalausta, kollaasia,
               liituja, luonnonmateriaaleja ja tekstiilejä. Viimeisimpänä mukaan
               on tullut myös installaatio ja keramiikka. Tekemiseni on lähes
               aina sarjallista.
             </p>
-            <p className="text-md mt-4 max-w-3xl font-medium leading-relaxed">
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed">
               Olen tehnyt myös kuvituksia, ja tällä hetkellä työstän
               lastenkirjaa, joka on Pro gradu-tutkimukseni loppuprodukti.
               Lisäksi työskentelen keramiikkasarjan parissa, joka käsittelee
               sairautta osana luontoa ja sen kiertokulkua.
             </p>
-            <p className="text-md mt-4 max-w-3xl font-medium leading-relaxed">
+            <p className="mt-4 max-w-3xl text-lg  leading-relaxed">
               Ilmaisuni yhdistelee mimeettistä ja ekspressiivistä jälkeä, ja
               pyrin jatkuvasti rouheampaan ja viitteellisempään suuntaan.
               Teosten aiheet nousevat omista kokemuksistani, ja kiinnittyvät
@@ -50,110 +62,133 @@ export default async function TaidePortfolio() {
               sekä sitä, miten ne kytkeytyvät yhteen.
             </p>
           </div>
-
+        </div>
+        <div className="-mx-4  flex flex-wrap justify-evenly gap-10 overflow-hidden">
           <Image
-            className="mt-8 rounded-3xl lg:mt-0"
-            src="/images/valineet.webp"
-            width={488}
-            height={799}
+            className="mt-24 self-start md:hidden lg:mt-0"
+            src="/images/kollaasi.png"
+            width={500}
+            height={500}
             alt="s"
           />
+
+          <div className="-mx-4 mt-72 hidden flex-wrap justify-evenly gap-10 overflow-hidden md:flex">
+            <Image
+              className="mt-8  self-start lg:mt-0"
+              src="/images/putin.png"
+              width={400}
+              height={400}
+              alt="s"
+            />
+            <Image
+              className="mt-8  self-start lg:mt-0"
+              src="/images/ämpärit_ilman_taustaa.png"
+              width={400}
+              height={400}
+              alt="s"
+            />
+            <Image
+              className="mt-8  self-center lg:mt-0"
+              src="/images/karuselli-ilman-taustaa.png"
+              width={165}
+              height={174}
+              alt="s"
+            />
+
+            <Image
+              className="mt-8  self-center lg:mt-0"
+              src="/images/milja.png"
+              width={400}
+              height={400}
+              alt="s"
+            />
+          </div>
         </div>
       </div>
-      <div className="mt-56 w-full">
+      <div className="my-56 w-full">
         <div className="mx-4 flex flex-col flex-wrap items-start justify-center gap-14 lg:mx-44">
-          <h2 className="self-center text-center text-4xl font-bold uppercase tracking-widest text-blue-950 underline decoration-double decoration-4 ">
+          <h2 className="4 self-center text-center text-4xl font-bold uppercase tracking-widest text-blue-950  ">
             näyttelyt
           </h2>
           <div className="flex w-full flex-wrap justify-evenly gap-14  ">
-            <Link href="#">
-              <Card className="max-w-[350px] rounded-xl border-none bg-transparent shadow-none">
+            <Link href={"/nayttelyt/muuttolinnut"}>
+              <Card className="max-w-[500px] rounded-xl border-none bg-transparent shadow-none">
                 {" "}
                 <CardHeader className="p-0">
                   <Image
                     className=" rounded-xl"
                     src="/images/muuttolinnut.png"
                     alt="kuva muuttolinnuista"
-                    height={350}
-                    width={350}
+                    height={500}
+                    width={500}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   ></Image>
                 </CardHeader>
                 <CardContent className="p-2">
-                  <CardTitle className="text-lg font-bold tracking-wide">
+                  <CardTitle className="text-2xlfont-bold tracking-wide lg:text-2xl">
                     <span>Muuttolinnut</span>
-                    <span className="block text-xs font-thin">2023</span>
+                    <span className="block text-sm font-thin">2023</span>
                   </CardTitle>
-                  <CardDescription className="mt-1">
-                    <span className="mt-1 text-sm">
-                      Touko-kesäkuussa 2023 pidettiin Rovaniemellä galleria
-                      Valossa Lapin yliopiston kuvataidekasvatuksen
-                      opiskelijoiden yhteisnäyttely Yhteyksiä. Siellä oli esillä
-                      minun ja tekstiilitaiteilija Milja Rummukaisen yhteisteos
-                      Muuttolinnut, joka käsitteli paikkaan ja yhteisöön
-                      kuulumista, kodin rakentamista ja Rovaniemeä paikkana,
-                      joka on monelle koti vain hetken. Teos koostuu
-                      keraamisista ja ryijytekniikalla valmistetuista
-                      joutsenista.
-                    </span>
-                  </CardDescription>
+                  {/* <CardDescription className="mt-1">
+                  <span className="mt-1 text-lg">
+                    Touko-kesäkuussa 2023 pidettiin Rovaniemellä galleria
+                    Valossa Lapin yliopiston kuvataidekasvatuksen opiskelijoiden
+                    yhteisnäyttely Yhteyksiä. Siellä oli esillä minun ja
+                    tekstiilitaiteilija Milja Rummukaisen yhteisteos
+                    Muuttolinnut, joka käsitteli paikkaan ja yhteisöön
+                    kuulumista, kodin rakentamista ja Rovaniemeä paikkana, joka
+                    on monelle koti vain hetken. Teos koostuu keraamisista ja
+                    ryijytekniikalla valmistetuista joutsenista.
+                  </span>
+                </CardDescription> */}
                 </CardContent>
-                <CardFooter className="float-end mt-2">
-                  <Button
-                    variant={"link"}
-                    size={"icon"}
-                    className="rounded-2xl"
-                  >
-                    Katso lisää
-                  </Button>
-                </CardFooter>
               </Card>
             </Link>
-
-            <Link href="#">
-              <Card className="max-w-[350px] rounded-xl border-none bg-transparent shadow-none">
+          </div>
+        </div>
+      </div>{" "}
+      <div className="my-56 w-full">
+        <div className="mx-4 flex flex-col flex-wrap items-start justify-center gap-14 lg:mx-44">
+          <h2 className="4 self-center text-center text-4xl font-bold uppercase tracking-widest text-blue-950  ">
+            kokoelmat
+          </h2>
+          <div className="flex w-full flex-wrap justify-evenly gap-14  ">
+            <Link href={"#"}>
+              <Card className="max-w-[500px] rounded-xl border-none bg-transparent shadow-none">
                 {" "}
                 <CardHeader className="p-0">
                   <Image
                     className=" rounded-xl"
                     src="/images/muuttolinnut.png"
                     alt="kuva muuttolinnuista"
-                    height={350}
-                    width={350}
+                    height={500}
+                    width={500}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   ></Image>
                 </CardHeader>
                 <CardContent className="p-2">
-                  <CardTitle className="text-lg font-bold tracking-wide">
+                  <CardTitle className="text-2xlfont-bold tracking-wide lg:text-2xl">
                     <span>Muuttolinnut</span>
-                    <span className="block text-xs font-thin">2023</span>
+                    <span className="block text-sm font-thin">2023</span>
                   </CardTitle>
-                  <CardDescription className="mt-1">
-                    <span className="mt-1 text-sm">
-                      Touko-kesäkuussa 2023 pidettiin Rovaniemellä galleria
-                      Valossa Lapin yliopiston kuvataidekasvatuksen
-                      opiskelijoiden yhteisnäyttely Yhteyksiä. Siellä oli esillä
-                      minun ja tekstiilitaiteilija Milja Rummukaisen yhteisteos
-                      Muuttolinnut, joka käsitteli paikkaan ja yhteisöön
-                      kuulumista, kodin rakentamista ja Rovaniemeä paikkana,
-                      joka on monelle koti vain hetken. Teos koostuu
-                      keraamisista ja ryijytekniikalla valmistetuista
-                      joutsenista.
-                    </span>
-                  </CardDescription>
+                  {/* <CardDescription className="mt-1">
+                  <span className="mt-1 text-lg">
+                    Touko-kesäkuussa 2023 pidettiin Rovaniemellä galleria
+                    Valossa Lapin yliopiston kuvataidekasvatuksen opiskelijoiden
+                    yhteisnäyttely Yhteyksiä. Siellä oli esillä minun ja
+                    tekstiilitaiteilija Milja Rummukaisen yhteisteos
+                    Muuttolinnut, joka käsitteli paikkaan ja yhteisöön
+                    kuulumista, kodin rakentamista ja Rovaniemeä paikkana, joka
+                    on monelle koti vain hetken. Teos koostuu keraamisista ja
+                    ryijytekniikalla valmistetuista joutsenista.
+                  </span>
+                </CardDescription> */}
                 </CardContent>
-                <CardFooter className="float-end mt-2">
-                  <Button
-                    variant={"link"}
-                    size={"icon"}
-                    className="rounded-2xl"
-                  >
-                    Katso lisää
-                  </Button>
-                </CardFooter>
               </Card>
             </Link>
           </div>
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -1,29 +1,29 @@
-"use client";
-import Link from "next/link";
-import { Drawer, DrawerContent, DrawerHeader } from "./ui/drawer";
-import { useState } from "react";
-import Image from "next/image";
+"use client"
+import Link from "next/link"
+import { Drawer, DrawerContent, DrawerHeader } from "./ui/drawer"
+import { useState } from "react"
+import Image from "next/image"
 export default function MainNav() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <div className="fixed top-0  flex w-full pl-4 pt-4 md:pl-24">
       <span
         role="button"
-        className="z-0 text-xl font-bold text-cyan-950 md:text-3xl"
+        className="text-text-secondary z-0 text-xl font-bold hover:underline md:text-3xl "
         onClick={() => setOpen(!open)}
       >
         menu
       </span>
       <Drawer direction="bottom" open={open} onOpenChange={setOpen}>
         <DrawerContent
-          className="flex h-[90%] flex-col justify-evenly bg-blue-200 "
+          className="bg-menu_bg flex h-[90%] flex-col justify-evenly"
           onClick={() => setOpen(!open)}
         >
           {" "}
           <DrawerHeader>
             <ul className="ml-4 flex gap-7 md:ml-14">
-              <li className="text-md w-14 border-b-8 border-blue-800"></li>
+              <li className="bg-attention size-8 rounded-full"></li>
               <li>
                 <Link
                   href={"https://www.instagram.com/anni_keskipoikela/"}
@@ -53,22 +53,22 @@ export default function MainNav() {
             </ul>
           </DrawerHeader>
           <ul
-            className="ml-4 mt-4 flex flex-col gap-16 md:ml-12"
+            className="text-text-secondary ml-4 mt-4 flex flex-col gap-16 md:ml-12"
             onClick={() => setOpen(!open)}
           >
             <li className=" width-[100%] mt-2 md:block">
               <Link
                 href={"/"}
-                className="block w-full py-2 pl-4 text-5xl font-semibold text-blue-950 transition-all duration-100  hover:text-slate-100 md:inline  md:text-7xl"
+                className="block w-full py-2 pl-4 text-5xl font-semibold transition-all duration-100  hover:text-slate-100 md:inline  md:text-7xl"
               >
-                Minä
+                Etusivu
               </Link>
             </li>
 
             <li className="">
               <Link
                 href={"/taide-portfolio"}
-                className="block w-full py-2 pl-4 text-5xl font-semibold text-blue-950 transition-all  duration-100 hover:text-slate-100 md:inline md:text-7xl "
+                className="block w-full py-2 pl-4 text-5xl font-semibold  transition-all  duration-100 hover:text-slate-100 md:inline md:text-7xl "
               >
                 Portfolio
               </Link>
@@ -108,5 +108,5 @@ export default function MainNav() {
                 </NavigationMenuList>
             </NavigationMenu> */}
     </div>
-  );
+  )
 }

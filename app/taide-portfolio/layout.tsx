@@ -1,9 +1,11 @@
-import React from "react";
+import React from "react"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <main className="min-h-dvh  bg-slate-50 pt-12">{children}</main>
+      <main className="min-h-dvh  bg-[#E4E5E9] pt-12 text-[#184133]">
+        {children}
+      </main>
     </>
-  );
+  )
 }
