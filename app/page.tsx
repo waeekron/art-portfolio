@@ -1,8 +1,8 @@
 import Image from "next/image"
 export default function Home() {
   return (
-    <main>
-      <div className="container  flex flex-wrap items-center justify-around gap-4 md:mx-auto lg:h-screen  lg:flex-nowrap  ">
+    <main className="lg:text-lg">
+      <div className="flex flex-wrap items-center justify-around gap-4 px-4 md:container md:mx-auto md:px-0 lg:h-screen lg:flex-nowrap  lg:text-lg  ">
         <div className="">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>
           <div className="mt-4 divide-x-8 text-xl font-thin md:text-3xl">
@@ -11,7 +11,7 @@ export default function Home() {
             <span>taiteilija</span>
           </div>
           <article className="mt-12 max-w-xl">
-            <p className="text-lg leading-relaxed tracking-wide">
+            <p className="text-md leading-relaxed tracking-wide">
               Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
               kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
               vaaramaisemia. Erityisesti rakastan kaikkea käsillä tekemistä,
@@ -32,9 +32,9 @@ export default function Home() {
           className="w-max"
         ></Image>
       </div>
-      <section className="container mx-auto mt-1">
+      <section className="mx-auto mt-44 px-4 md:container md:px-0">
         <h1 className="text-4xl ">Erityisosaaminen</h1>
-        <div className="mt-8  flex max-w-4xl flex-col   gap-6 text-lg font-medium leading-relaxed tracking-wide">
+        <div className="mt-8 flex max-w-4xl   flex-col gap-6 font-medium leading-relaxed tracking-wide">
           <p className="border-text-secondary">
             Opinnot ja elämä pohjoisessa on tuonut mukanaan taitoja, joista koen
             olevan hyötyä työssäni sekä taiteilijana, että opettajana:
@@ -62,7 +62,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="container mx-auto mt-36 ">
+      <div className="mx-auto mt-36 px-4 md:container md:px-0 ">
         <h1 className="text-4xl">Ota yhteyttä</h1>
         <ul className="mt-8 flex flex-col gap-2">
           <li className="flex gap-4">

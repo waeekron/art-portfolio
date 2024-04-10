@@ -28,30 +28,30 @@ export default async function TaidePortfolio() {
   console.log(data)
   return (
     <>
-      <h1 className="text-center text-2xl font-extrabold uppercase tracking-wider  md:text-5xl lg:text-6xl">
+      <h1 className="text-center text-4xl font-extrabold uppercase tracking-wider  md:text-5xl lg:text-6xl">
         Taiteilijaportfolio
       </h1>
       <span className="mt-2 block text-center text-2xl">Anni Keskipoikela</span>
       <div className="mt-24 w-full px-4">
         <div className="flex flex-wrap justify-evenly">
-          <div className="flex flex-col items-start justify-start ">
+          <div className="flex flex-col items-start justify-start lg:text-lg ">
             <h2 className="text-xl font-bold uppercase tracking-widest  underline decoration-double decoration-4 ">
               Artist statement
             </h2>
-            <p className="mt-8 max-w-3xl text-lg leading-relaxed">
+            <p className="mt-8 max-w-3xl leading-relaxed">
               Viime vuodet olen työskennellyt enimmäkseen sekatekniikan parissa.
               Yhdistelen teoksissani esimerkiksi akryylimaalausta, kollaasia,
               liituja, luonnonmateriaaleja ja tekstiilejä. Viimeisimpänä mukaan
               on tullut myös installaatio ja keramiikka. Tekemiseni on lähes
               aina sarjallista.
             </p>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed">
+            <p className="mt-4 max-w-3xl leading-relaxed">
               Olen tehnyt myös kuvituksia, ja tällä hetkellä työstän
               lastenkirjaa, joka on Pro gradu-tutkimukseni loppuprodukti.
               Lisäksi työskentelen keramiikkasarjan parissa, joka käsittelee
               sairautta osana luontoa ja sen kiertokulkua.
             </p>
-            <p className="mt-4 max-w-3xl text-lg  leading-relaxed">
+            <p className="mt-4 max-w-3xl leading-relaxed">
               Ilmaisuni yhdistelee mimeettistä ja ekspressiivistä jälkeä, ja
               pyrin jatkuvasti rouheampaan ja viitteellisempään suuntaan.
               Teosten aiheet nousevat omista kokemuksistani, ja kiinnittyvät
@@ -107,7 +107,7 @@ export default async function TaidePortfolio() {
       </div>
       <div className="my-56 w-full">
         <div className="mx-4 flex flex-col flex-wrap items-start justify-center gap-14 lg:mx-44">
-          <h2 className="4 self-center text-center text-4xl font-bold uppercase tracking-widest text-blue-950  ">
+          <h2 className=" text-4xl font-bold uppercase tracking-widest text-blue-950 md:self-center md:text-center  ">
             näyttelyt
           </h2>
           <div className="flex w-full flex-wrap justify-evenly gap-14  ">
