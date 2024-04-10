@@ -15,14 +15,14 @@ export default function MainNav() {
       >
         menu
       </span>
-      <Drawer open={open} onOpenChange={setOpen}>
+      <Drawer open={open} direction="right" onOpenChange={setOpen}>
         <DrawerContent
-          className="bg-menu_bg flex h-screen flex-col justify-evenly"
+          className="bg-menu_bg flex h-svh flex-col justify-around"
           onClick={() => setOpen(!open)}
         >
           {" "}
           <DrawerHeader>
-            <ul className="ml-4 flex gap-7 pt-8 md:ml-14">
+            <ul className="ml-4 flex gap-7  md:ml-14">
               <li className="bg-attention size-8 rounded-full"></li>
               <li>
                 <Link

@@ -1,8 +1,8 @@
 import Image from "next/image"
 export default function Home() {
   return (
-    <>
-      <main className="container flex h-screen flex-wrap items-center justify-around gap-4 md:mx-auto md:*:w-4/6 lg:flex-nowrap  ">
+    <main>
+      <div className="container  flex flex-wrap items-center justify-around gap-4 md:mx-auto lg:h-screen  lg:flex-nowrap  ">
         <div className="">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>
           <div className="mt-4 divide-x-8 text-xl font-thin md:text-3xl">
@@ -31,8 +31,8 @@ export default function Home() {
           alt="napero"
           className="rounde"
         ></Image>
-      </main>
-      <section className="container mx-auto">
+      </div>
+      <section className="container mx-auto mt-1">
         <h1 className="text-4xl ">Erityisosaaminen</h1>
         <div className="mt-8  flex max-w-4xl flex-col   gap-6 text-lg font-medium leading-relaxed tracking-wide">
           <p className="border-text-secondary">
@@ -128,6 +128,6 @@ export default function Home() {
         </ul>
       </div>
       <div className="h-[200px]"></div>
-    </>
+    </main>
   )
 }
