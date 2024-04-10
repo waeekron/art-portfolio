@@ -17,7 +17,7 @@ export default function MainNav() {
       </span>
       <Drawer direction="bottom" open={open} onOpenChange={setOpen}>
         <DrawerContent
-          className="bg-menu_bg flex h-[90%] flex-col justify-evenly"
+          className="bg-menu_bg flex h-screen flex-col justify-evenly"
           onClick={() => setOpen(!open)}
         >
           {" "}
@@ -75,10 +75,11 @@ export default function MainNav() {
             </li>
           </ul>
           <Image
-            className="self-end"
+            className="self-end pr-2"
             src="/images/karhu.png"
-            width={150}
-            height={250}
+            width={100}
+            height={100}
+            sizes=""
             alt="_"
           ></Image>
         </DrawerContent>
