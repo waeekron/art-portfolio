@@ -1,13 +1,19 @@
 "use client"
 import Link from "next/link"
 import { Drawer, DrawerContent, DrawerHeader } from "./ui/drawer"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 export default function MainNav() {
   const [open, setOpen] = useState(false)
-
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden"
+    } else {
+      document.body.style.overflowY = "auto"
+    }
+  }, [open])
   return (
-    <div className="fixed top-0  flex w-full pl-4 pt-4 md:pl-24">
+    <div className="fixed top-0  flex w-dvw pl-4 md:pl-24">
       <span
         role="button"
         className="text-text-secondary z-0 text-xl font-bold hover:underline md:text-3xl "
@@ -15,9 +21,11 @@ export default function MainNav() {
       >
         menu
       </span>
-      <Drawer open={open} direction="right" onOpenChange={setOpen}>
-        <DrawerContent
-          className="bg-menu_bg flex h-svh flex-col justify-around"
+      <dialog
+        className={`${open ? "block" : "hidden"}  fixed h-[100%] w-[100%]`}
+      >
+        <div
+          className="bg-menu_bg flex h-svh  flex-col justify-around  "
           onClick={() => setOpen(!open)}
         >
           {" "}
@@ -82,8 +90,8 @@ export default function MainNav() {
             sizes=""
             alt="_"
           ></Image>
-        </DrawerContent>
-      </Drawer>
+        </div>
+      </dialog>
       {/* 
 
             <NavigationMenu className="hidden  sm:flex ">
