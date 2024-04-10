@@ -29,7 +29,7 @@ export default function Home() {
           height={400}
           width={400}
           alt="napero"
-          className="rounde"
+          className="w-max"
         ></Image>
       </div>
       <section className="container mx-auto mt-1">
