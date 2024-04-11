@@ -27,7 +27,7 @@ export default async function TaidePortfolio() {
   const data = await getTaidePortfolioData()
   console.log(data)
   return (
-    <>
+    <div>
       <h1 className="text-center text-4xl font-extrabold uppercase tracking-wider  md:text-5xl lg:text-6xl">
         Taiteilijaportfolio
       </h1>
@@ -189,6 +189,6 @@ export default async function TaidePortfolio() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
