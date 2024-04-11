@@ -28,7 +28,7 @@ export default function MainNav() {
         </span>
         <div
           id="menu"
-          className={`${open ? "translate-y-[0%]" : "translate-y-[150%]"}  fixed z-10 h-screen  transition-all ease-out`}
+          className={`${open ? "translate-y-[0%]" : "translate-y-[150%]"}  fixed z-10 h-screen transition-all duration-500 ease-in-out`}
         >
           <div className=" h-screen w-screen max-w-none  ">
             {" "}
