@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function Home() {
   return (
-    <main className="pt-24 lg:text-lg">
+    <main className="pt-24 md:pt-10 lg:text-lg">
       <div className="flex flex-wrap items-center justify-evenly px-4 md:container md:mx-auto md:px-0 lg:h-screen lg:flex-nowrap  lg:text-lg  ">
         <div className="md:max-h-svh  ">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>
@@ -17,7 +17,7 @@ export default function Home() {
                 height={170}
                 width={170}
                 alt="napero"
-                className=" block  md:hidden"
+                className=" block translate-y-12 md:hidden"
               />
               <Image
                 height={170}
@@ -28,9 +28,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <article className="mt-12 max-w-xl">
-            <h1 className="text-4xl ">Minusta</h1>
-            <p className="text-md leading-relaxed tracking-wide">
+          <article className="max-w-lg lg:mt-12">
+            <h1 className="text-4xl font-bold md:hidden ">Minusta</h1>
+            <p className="text-lg leading-relaxed tracking-wide lg:mt-8">
               Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
               kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
               vaaramaisemia. Erityisesti rakastan kaikkea käsillä tekemistä,
@@ -43,7 +43,7 @@ export default function Home() {
             </p>
           </article>
         </div>
-        <div className=" mt-16 flex max-w-xs gap-1  ">
+        <div className=" lg:h[300px] mt-16 flex  justify-center gap-1  ">
           <Image
             src="/images/keskittyy.jpg"
             height={220}
@@ -55,13 +55,13 @@ export default function Home() {
             height={240}
             width={240}
             alt="napero"
-            className=" hidden md:block"
+            className=" hidden translate-y-12 md:block"
             src="/images/sormi.jpg"
           />
         </div>
       </div>
-      <section className="mx-auto mt-32  px-4 md:container md:px-0">
-        <h1 className="text-4xl ">Erityisosaaminen</h1>
+      <section className="mx-auto mt-32  px-4 md:container ">
+        <h1 className="text-4xl font-bold">Erityisosaaminen</h1>
         <div className="mt-8 flex max-w-4xl   flex-col gap-6 font-medium leading-relaxed tracking-wide">
           <p className="border-text-secondary">
             Opinnot ja elämä pohjoisessa on tuonut mukanaan taitoja, joista koen
@@ -90,7 +90,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="mx-auto mt-36 px-4 md:container md:px-0 ">
+      <div className="mx-auto mt-36 px-4 md:container  ">
         <h1 className="text-4xl">Ota yhteyttä</h1>
         <ul className="mt-8 flex flex-col gap-2">
           <li className="flex gap-4">

@@ -27,15 +27,49 @@ export default async function TaidePortfolio() {
   const data = await getTaidePortfolioData()
   console.log(data)
   return (
-    <div>
-      <h1 className="text-center text-xl font-extrabold uppercase tracking-wide  md:text-5xl lg:text-6xl">
-        Taiteilijaportfolio
-      </h1>
-      <span className="mt-2 block text-center text-2xl">Anni Keskipoikela</span>
-      <div className="mt-24 w-full px-4">
+    <div className="">
+      <div className="h-svh">
+        <h1 className=" mb-2 ml-4 mt-12 text-4xl font-bold tracking-widest sm:ml-12 md:ml-4 md:hidden md:text-7xl">
+          Portfolio
+        </h1>{" "}
+        <div className=" flex justify-center md:max-h-svh">
+          <h1 className=" hidden text-4xl font-bold tracking-widest [writing-mode:vertical-rl] md:block md:text-7xl">
+            Portfolio
+          </h1>{" "}
+          <span className=" mt-2 block text-xl font-bold  [text-orientation:upright] [writing-mode:vertical-rl] md:mr-2 ">
+            Anni Keskipoikela
+          </span>
+          <div className="mr-1 grid grid-cols-2 gap-1 md:gap-4">
+            <Image
+              src="/images/soutaja.webp"
+              width={300}
+              height={300}
+              alt=""
+              className="self-end md:self-auto"
+            />
+            <Image
+              src="/images/putin.webp"
+              className="self-end"
+              width={300}
+              height={300}
+              alt=""
+            />
+            <Image
+              src="/images/milja.webp"
+              width={300}
+              height={300}
+              alt=""
+              className="md:self-center"
+            />
+
+            <Image src="/images/tauko.webp" width={300} height={300} alt="" />
+          </div>{" "}
+        </div>{" "}
+      </div>
+      <div className="mt-28 w-full px-4">
         <div className="flex flex-wrap justify-evenly">
           <div className="flex flex-col items-start justify-start lg:text-lg ">
-            <h2 className="text-xl font-bold uppercase tracking-widest  underline decoration-double decoration-4 ">
+            <h2 className="border-b-8 border-text-primary text-2xl font-bold uppercase tracking-widest underline  decoration-double decoration-4 md:text-4xl ">
               Artist statement
             </h2>
             <p className="mt-8 max-w-3xl leading-relaxed">
@@ -63,7 +97,7 @@ export default async function TaidePortfolio() {
             </p>
           </div>
         </div>
-        <div className="-mx-4  flex flex-wrap justify-evenly gap-10 overflow-hidden">
+        {/* <div className="-mx-4  flex flex-wrap justify-evenly gap-10 overflow-hidden">
           <Image
             className="mt-24 self-start md:hidden lg:mt-0"
             src="/images/kollaasi.png"
@@ -103,7 +137,7 @@ export default async function TaidePortfolio() {
               alt="s"
             />
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="my-56 w-full">
         <div className="mx-4 flex flex-col flex-wrap items-start justify-center gap-14 lg:mx-44">
