@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function Home() {
   return (
-    <main className="lg:text-lg">
+    <main className="pt-24 lg:text-lg">
       <div className="flex flex-wrap items-center justify-around gap-4 px-4 md:container md:mx-auto md:px-0 lg:h-screen lg:flex-nowrap  lg:text-lg  ">
         <div className="">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>

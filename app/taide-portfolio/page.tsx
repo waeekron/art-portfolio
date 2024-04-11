@@ -28,7 +28,7 @@ export default async function TaidePortfolio() {
   console.log(data)
   return (
     <div>
-      <h1 className="text-center text-4xl font-extrabold uppercase tracking-wider  md:text-5xl lg:text-6xl">
+      <h1 className="text-center text-xl font-extrabold uppercase tracking-wide  md:text-5xl lg:text-6xl">
         Taiteilijaportfolio
       </h1>
       <span className="mt-2 block text-center text-2xl">Anni Keskipoikela</span>
@@ -107,7 +107,7 @@ export default async function TaidePortfolio() {
       </div>
       <div className="my-56 w-full">
         <div className="mx-4 flex flex-col flex-wrap items-start justify-center gap-14 lg:mx-44">
-          <h2 className=" text-4xl font-bold uppercase tracking-widest text-blue-950 md:self-center md:text-center  ">
+          <h2 className=" self-center text-4xl font-bold uppercase tracking-widest text-blue-950 md:text-center  ">
             näyttelyt
           </h2>
           <div className="flex w-full flex-wrap justify-evenly gap-14  ">

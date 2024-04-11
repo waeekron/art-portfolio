@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${poppins.className} w-[100vw] items-center justify-center bg-[#E4E5E9]   text-[#184133]`}
+        className={` ${poppins.className} items-center  justify-center bg-[#E4E5E9]   text-[#184133]`}
       >
         <MainNav />
 

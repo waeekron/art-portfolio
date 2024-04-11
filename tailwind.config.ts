@@ -22,8 +22,26 @@ const config = {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        entrance: "entrance .2s ease-out",
+        exit: "exit .2s ease-out",
       },
       keyframes: {
+        exit: {
+          from: {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(-100%)",
+          },
+        },
+        entrance: {
+          from: {
+            transform: "translateY(-100%)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
