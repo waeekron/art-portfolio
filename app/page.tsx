@@ -14,14 +14,14 @@ export default function Home() {
             <div className=" mt-16 flex max-w-xs gap-1 ">
               <Image
                 src="/images/keskittyy.jpg"
-                height={180}
-                width={180}
+                height={170}
+                width={170}
                 alt="napero"
                 className=" block  md:hidden"
               />
               <Image
-                height={180}
-                width={180}
+                height={170}
+                width={170}
                 alt="napero"
                 className=" block  md:hidden"
                 src="/images/sormi.jpg"
@@ -43,10 +43,10 @@ export default function Home() {
             </p>
           </article>
         </div>
-        <div className=" mt-16 flex max-w-xs gap-1 ">
+        <div className=" mt-16 flex max-w-xs gap-1  ">
           <Image
             src="/images/keskittyy.jpg"
-            height={240}
+            height={220}
             width={240}
             alt="napero"
             className=" hidden  md:block"
