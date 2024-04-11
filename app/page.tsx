@@ -2,15 +2,34 @@ import Image from "next/image"
 export default function Home() {
   return (
     <main className="pt-24 lg:text-lg">
-      <div className="flex flex-wrap items-center justify-around gap-4 px-4 md:container md:mx-auto md:px-0 lg:h-screen lg:flex-nowrap  lg:text-lg  ">
-        <div className="">
+      <div className="flex flex-wrap items-center justify-evenly px-4 md:container md:mx-auto md:px-0 lg:h-screen lg:flex-nowrap  lg:text-lg  ">
+        <div className="md:max-h-svh  ">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>
-          <div className="mt-4 divide-x-8 text-xl font-thin md:text-3xl">
-            <span>kuvateideopettaja</span>
-            <span>&</span>
-            <span>taiteilija</span>
+          <div className="h-svh md:h-fit">
+            <div className="mt-4 divide-x-8 pl-1 text-xl font-thin md:text-3xl">
+              <span>kuvateideopettaja</span>
+              <span>&</span>
+              <span>taiteilija</span>
+            </div>
+            <div className=" mt-16 flex max-w-xs gap-1 ">
+              <Image
+                src="/images/keskittyy.jpg"
+                height={180}
+                width={180}
+                alt="napero"
+                className=" block  md:hidden"
+              />
+              <Image
+                height={180}
+                width={180}
+                alt="napero"
+                className=" block  md:hidden"
+                src="/images/sormi.jpg"
+              />
+            </div>
           </div>
           <article className="mt-12 max-w-xl">
+            <h1 className="text-4xl ">Minusta</h1>
             <p className="text-md leading-relaxed tracking-wide">
               Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
               kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
@@ -24,15 +43,24 @@ export default function Home() {
             </p>
           </article>
         </div>
-        <Image
-          src="/images/napero.jpg"
-          height={400}
-          width={400}
-          alt="napero"
-          className="w-max"
-        ></Image>
+        <div className=" mt-16 flex max-w-xs gap-1 ">
+          <Image
+            src="/images/keskittyy.jpg"
+            height={240}
+            width={240}
+            alt="napero"
+            className=" hidden  md:block"
+          />
+          <Image
+            height={240}
+            width={240}
+            alt="napero"
+            className=" hidden md:block"
+            src="/images/sormi.jpg"
+          />
+        </div>
       </div>
-      <section className="mx-auto mt-44 px-4 md:container md:px-0">
+      <section className="mx-auto mt-32  px-4 md:container md:px-0">
         <h1 className="text-4xl ">Erityisosaaminen</h1>
         <div className="mt-8 flex max-w-4xl   flex-col gap-6 font-medium leading-relaxed tracking-wide">
           <p className="border-text-secondary">

@@ -32,7 +32,7 @@ export default function MainNav() {
         >
           <div className=" h-screen w-screen max-w-none  ">
             {" "}
-            <div className="flex  h-svh flex-col justify-around bg-menu_bg align-baseline">
+            <div className="flex  h-screen flex-col justify-around bg-menu_bg align-baseline">
               {" "}
               <ul className="ml-4 mt-4 flex w-fit items-center gap-7 border-b-8 border-attention pb-3 md:ml-14">
                 <li
