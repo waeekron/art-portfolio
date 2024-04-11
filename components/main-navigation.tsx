@@ -12,19 +12,12 @@ export default function MainNav() {
       <div className="fixed top-0 z-20 flex h-screen ">
         <span
           role="button"
-          className="fixed z-50 px-4 pt-1 text-2xl font-bold text-text-secondary hover:underline md:text-4xl lg:pl-14 "
+          className="fixed z-50 px-4 pt-1 text-xl font-bold text-text-secondary transition-all duration-150 hover:underline  md:text-3xl lg:pl-14 "
           onClick={() => {
-            if (open) {
-              setTimeout(() => {
-                let el = document.getElementById("menu")?.className
-                el = "hidden"
-              }, 1000)
-            }
-
             setOpen(!open)
           }}
         >
-          menu
+          {open ? "sulje" : "valikko"}
         </span>
         <div
           id="menu"

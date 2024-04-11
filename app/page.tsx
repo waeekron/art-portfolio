@@ -1,35 +1,40 @@
 import Image from "next/image"
 export default function Home() {
   return (
-    <main className="pt-24 md:pt-10 lg:text-lg">
-      <div className="flex flex-wrap items-center justify-evenly px-4 md:container md:mx-auto md:px-0 lg:h-screen lg:flex-nowrap  lg:text-lg  ">
+    <main className="mt-10  lg:text-lg">
+      <div className="flex flex-wrap items-center justify-evenly px-4 md:container  md:mx-auto  lg:h-screen lg:flex-nowrap  lg:text-lg  ">
         <div className="md:max-h-svh  ">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>
           <div className="h-svh md:h-fit">
             <div className="mt-4 divide-x-8 pl-1 text-xl font-thin md:text-3xl">
-              <span>kuvateideopettaja</span>
+              <span>kuvataideopettaja</span>
               <span>&</span>
               <span>taiteilija</span>
             </div>
-            <div className=" mt-16 flex max-w-xs gap-1 ">
+            <div className=" mt-16 flex gap-1  ">
               <Image
                 src="/images/keskittyy.jpg"
                 height={170}
                 width={170}
                 alt="napero"
-                className=" block translate-y-12 md:hidden"
+                sizes="(max-width: 600px) 50vw, (max-width: 1024px) 50vw, 50vw"
+                layout="responsive"
+                className="block  translate-y-12 md:hidden"
               />
+
               <Image
                 height={170}
+                sizes="(max-width: 500px) 50%, 170px"
                 width={170}
                 alt="napero"
+                layout="responsive"
                 className=" block  md:hidden"
                 src="/images/sormi.jpg"
               />
             </div>
           </div>
           <article className="max-w-lg lg:mt-12">
-            <h1 className="text-4xl font-bold md:hidden ">Minusta</h1>
+            <h1 className="mb-8 text-4xl md:hidden">Minusta</h1>
             <p className="text-lg leading-relaxed tracking-wide lg:mt-8">
               Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
               kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
@@ -61,7 +66,7 @@ export default function Home() {
         </div>
       </div>
       <section className="mx-auto mt-32  px-4 md:container ">
-        <h1 className="text-4xl font-bold">Erityisosaaminen</h1>
+        <h1 className="text-4xl ">Erityisosaaminen</h1>
         <div className="mt-8 flex max-w-4xl   flex-col gap-6 font-medium leading-relaxed tracking-wide">
           <p className="border-text-secondary">
             Opinnot ja elämä pohjoisessa on tuonut mukanaan taitoja, joista koen

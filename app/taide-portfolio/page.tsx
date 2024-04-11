@@ -29,7 +29,7 @@ export default async function TaidePortfolio() {
   return (
     <div className="">
       <div className="h-svh">
-        <h1 className=" mb-2 ml-4 mt-12 text-4xl font-bold tracking-widest sm:ml-12 md:ml-4 md:hidden md:text-7xl">
+        <h1 className=" mb-2 ml-4 text-4xl font-bold tracking-widest sm:ml-12 md:ml-4 md:mt-12 md:hidden md:text-7xl">
           Portfolio
         </h1>{" "}
         <div className=" flex justify-center md:max-h-svh">
@@ -45,11 +45,11 @@ export default async function TaidePortfolio() {
               width={300}
               height={300}
               alt=""
-              className="self-end md:self-auto"
+              className=" md:self-auto"
             />
             <Image
               src="/images/putin.webp"
-              className="self-end"
+              className=""
               width={300}
               height={300}
               alt=""
@@ -59,7 +59,7 @@ export default async function TaidePortfolio() {
               width={300}
               height={300}
               alt=""
-              className="md:self-center"
+              className="self-end md:self-center"
             />
 
             <Image src="/images/tauko.webp" width={300} height={300} alt="" />
