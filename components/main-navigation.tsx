@@ -9,7 +9,7 @@ export default function MainNav() {
 
   return (
     <>
-      <div className="fixed top-0 z-20 flex h-screen overflow-y-scroll overscroll-contain ">
+      <div className="fixed top-0 z-20 flex h-screen ">
         <span
           role="button"
           className="fixed z-50 px-4 pt-1 text-2xl font-bold text-text-secondary hover:underline md:text-4xl lg:pl-14 "
