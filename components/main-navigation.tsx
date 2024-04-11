@@ -3,23 +3,16 @@ import Link from "next/link"
 import { Drawer, DrawerContent, DrawerHeader } from "./ui/drawer"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog"
+
 export default function MainNav() {
   const [open, setOpen] = useState(false)
 
   return (
     <>
-      <div className="fixed top-0 z-20 flex h-screen  ">
+      <div className="fixed top-0 z-20 flex h-screen overflow-y-scroll overscroll-contain ">
         <span
           role="button"
-          className="fixed z-50 p-6 text-2xl font-bold text-text-secondary hover:underline md:text-4xl lg:pl-14 "
+          className="fixed z-50 px-4 pt-1 text-2xl font-bold text-text-secondary hover:underline md:text-4xl lg:pl-14 "
           onClick={() => {
             if (open) {
               setTimeout(() => {
@@ -80,7 +73,7 @@ export default function MainNav() {
                 <li className=" width-[100%] mt-2 md:block">
                   <Link
                     href={"/"}
-                    className="block w-full py-2 pl-4 text-5xl font-semibold transition-all duration-100  hover:text-slate-100 md:inline  md:text-7xl"
+                    className="block w-full py-2  text-5xl font-semibold transition-all duration-100  hover:text-slate-100 md:inline  md:text-7xl"
                   >
                     Etusivu
                   </Link>
@@ -89,7 +82,7 @@ export default function MainNav() {
                 <li className="">
                   <Link
                     href={"/taide-portfolio"}
-                    className="block w-full py-2 pl-4 text-5xl font-semibold  transition-all  duration-100 hover:text-slate-100 md:inline md:text-7xl "
+                    className="block w-full py-2 text-5xl font-semibold  transition-all  duration-100 hover:text-slate-100 md:inline md:text-7xl "
                   >
                     Portfolio
                   </Link>

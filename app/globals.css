@@ -66,9 +66,6 @@
   }
 }
 
-html {
-  scrollbar-gutter: stable;
-}
 @layer base {
   * {
     @apply border-border;
