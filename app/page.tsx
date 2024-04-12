@@ -1,10 +1,10 @@
 import Image from "next/image"
 export default function Home() {
   return (
-    <main className=" min-h-screen lg:text-lg">
+    <main className=" mb-8 min-h-screen lg:text-lg">
       <div className="flex flex-wrap items-center justify-evenly px-4 pt-10 md:container md:mx-auto  lg:h-screen lg:flex-nowrap  lg:text-lg  ">
         <div className="">
-          <div className=" h-svh sm:h-auto">
+          <div className="  min-h-svh  sm:h-auto sm:min-h-fit">
             <div className="flex flex-col items-center  gap-6 md:flex-row ">
               {" "}
               <Image
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start">
               <article className="h-fit  max-w-xl">
-                <p className="leading-relaxed tracking-wide md:text-lg ">
+                <p className="text-lg leading-relaxed tracking-wide ">
                   Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
                   kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
                   vaaramaisemia. Erityisesti rakastan kaikkea käsillä tekemistä,
@@ -40,7 +40,7 @@ export default function Home() {
                 </p>
               </article>
             </div>{" "}
-            <div className="flex flex-col justify-end align-bottom  sm:hidden">
+            {/* <div className="flex flex-col justify-end align-bottom  sm:hidden">
               <h1 className="mt-6  text-xl font-semibold">Ota yhteyttä</h1>
               <ul className="mt-2 flex flex-col gap-2 text-sm">
                 <li className="flex gap-4">
@@ -104,10 +104,10 @@ export default function Home() {
                   <span className="items-end self-end">Rovaniemi, Lappi</span>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
-          <div className="hidden pl-2 sm:mt-12 sm:block">
-            <h1 className="text-3xl font-semibold">Ota yhteyttä</h1>
+          <div className="pl-2 ">
+            <h1 className="text-xl font-semibold">Ota yhteyttä</h1>
             <ul className="mt-4 flex flex-col gap-2">
               <li className="flex gap-4">
                 <span>
@@ -117,7 +117,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="h-7 w-7"
+                    className="h-6 w-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -136,7 +136,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="h-7 w-7"
+                    className="h-6 w-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -154,7 +154,7 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="h-7 w-7 "
+                  className="h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
