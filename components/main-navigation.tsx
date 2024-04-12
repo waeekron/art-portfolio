@@ -59,7 +59,7 @@ export default function MainNav() {
                 </li>
               </ul>
               <ul
-                className="ml-4 mt-4 flex flex-col gap-10 text-text-secondary md:ml-12"
+                className="ml-4 mt-4 flex flex-col gap-10  text-text-secondary md:ml-12"
                 onClick={() => setOpen(!open)}
               >
                 <li className=" width-[100%] mt-2 md:block">
@@ -77,6 +77,14 @@ export default function MainNav() {
                     className="block w-full py-2 text-3xl font-semibold transition-all duration-100  hover:text-slate-100  md:inline md:text-5xl lg:text-6xl "
                   >
                     Portfolio
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    href={"/curriculum-vitae"}
+                    className="block w-full py-2 text-3xl font-semibold transition-all duration-100  hover:text-slate-100  md:inline md:text-5xl lg:text-6xl "
+                  >
+                    Curriculum Vitae
                   </Link>
                 </li>
               </ul>
