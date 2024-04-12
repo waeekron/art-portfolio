@@ -1,11 +1,11 @@
 ## About
 Art portfolio website for my friend.
 
-### Built with
+## Built with
 - Next.js
 - Tailwind, Shadcn/ui
 - Storyblok CMS
-- 
+
 ### Getting Started
 First, run the development server:
 
