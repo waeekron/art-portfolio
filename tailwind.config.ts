@@ -57,9 +57,9 @@ const config = {
       },
       colors: {
         bg: "#E4E5E9",
-        menu_bg: "#F6E19F",
+        menu_bg: "#8EA69B",
         text: { primary: "#184133", secondary: "#144982" },
-        attention: "#B15B54",
+        attention: "#E4E5E9",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
