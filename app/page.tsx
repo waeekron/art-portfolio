@@ -3,9 +3,9 @@ export default function Home() {
   return (
     <main className="mt-10  lg:text-lg">
       <div className="flex flex-wrap items-center justify-evenly px-4 md:container  md:mx-auto  lg:h-screen lg:flex-nowrap  lg:text-lg  ">
-        <div className="md:max-h-svh  ">
+        <div className="md:max-h-svh">
           <h1 className="text-5xl font-bold md:text-7xl">Anni Keskipoikela</h1>
-          <div className="h-svh md:h-fit">
+          <div className="h-svh md:h-fit landscape:h-fit">
             <div className="mt-4 divide-x-8 pl-1 text-xl font-thin md:text-3xl">
               <span>kuvataideopettaja</span>
               <span>&</span>

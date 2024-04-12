@@ -23,7 +23,7 @@ export default function MainNav() {
           id="menu"
           className={`${open ? "translate-y-[0%]" : "translate-y-[150%]"}  fixed z-10 h-screen transition-all duration-500 ease-in-out`}
         >
-          <div className=" h-screen w-screen max-w-none  ">
+          <div className=" h-dvh w-screen max-w-none  ">
             {" "}
             <div className="flex  h-screen flex-col justify-around bg-menu_bg align-baseline">
               {" "}

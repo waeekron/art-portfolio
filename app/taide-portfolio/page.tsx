@@ -1,12 +1,4 @@
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -28,7 +20,7 @@ export default async function TaidePortfolio() {
   console.log(data)
   return (
     <div className="">
-      <div className="h-svh">
+      <div className="h-svh landscape:h-fit">
         <h1 className=" mb-2 ml-4 text-4xl font-bold tracking-widest sm:ml-12 md:ml-4 md:mt-12 md:hidden md:text-7xl">
           Portfolio
         </h1>{" "}
