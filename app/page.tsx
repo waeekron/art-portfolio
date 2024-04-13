@@ -26,14 +26,14 @@ export default function Home() {
             </div>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start">
               <article className="h-fit  max-w-xl px-4">
-                <p className="text-lg font-semibold italic leading-relaxed tracking-wide">
-                  "Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
+                <q className="text-lg font-semibold italic leading-relaxed tracking-wide">
+                  Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
                   kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
                   vaaramaisemia. Erityisesti rakastan kaikkea käsillä tekemistä,
                   retkeilyä ja kahvia. Onnellisimmillani olen oivalluksen
                   äärellä. Aloillani olen harvoin. Iloa saan erityisesti
-                  jaetuista hetkistä, taiteesta ja kauneudesta arjessa."{" "}
-                </p>
+                  jaetuista hetkistä, taiteesta ja kauneudesta arjessa.{" "}
+                </q>
               </article>
             </div>{" "}
             {/* <div className="flex flex-col justify-end align-bottom  sm:hidden">
