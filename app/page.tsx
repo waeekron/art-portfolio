@@ -5,38 +5,34 @@ export default function Home() {
       <div className="flex flex-wrap items-center justify-evenly px-4 pt-10 md:container md:mx-auto  lg:h-screen lg:flex-nowrap  lg:text-lg  ">
         <div className="">
           <div className="  min-h-svh  sm:h-auto sm:min-h-fit">
-            <div className="flex flex-col items-center  gap-6 md:flex-row ">
-              {" "}
-              <Image
-                alt="Kuva Anni Keskipoikelasta"
-                src={"/images/anskupansku.jpg"}
-                width={200}
-                height={200}
-                sizes="(max-width:500px) 40vw,100vw"
-                className="rounded-full sm:self-start  "
-              />
-              <div className="text-center sm:self-start sm:text-start md:self-center">
-                <h1 className="text-3xl font-bold md:text-7xl">
-                  Anni Keskipoikela
-                </h1>
-                <div className=" md:h-fit landscape:h-fit">
-                  <div className="mt-4 flex flex-wrap gap-2 pl-1 text-lg font-thin md:text-3xl">
-                    <span>kuvataideopettaja</span>
-                    <span>&</span>
-                    <span>taiteilija</span>
-                  </div>{" "}
-                </div>{" "}
+            <div className="flex gap-8 ">
+              <div className="flex">
+                <div className="self-start text-end text-7xl font-extrabold [text-orientation:upright] [writing-mode:vertical-rl] ">
+                  anni
+                </div>
+                <div className="pb-5 text-end text-xl font-bold tracking-widest [text-orientation:upright] [writing-mode:vertical-rl]">
+                  keskipoikela
+                </div>
+              </div>
+              <div className="flex w-full flex-col justify-center">
+                <Image
+                  alt="Kuva Anni Keskipoikelasta"
+                  src={"/images/anskupansku.jpg"}
+                  width={360}
+                  height={360}
+                  className=" rounded-full "
+                />
               </div>
             </div>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start">
-              <article className="h-fit  max-w-xl">
-                <p className="text-lg leading-relaxed tracking-wide ">
-                  Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
+              <article className="h-fit  max-w-xl px-4">
+                <p className="text-lg font-semibold italic leading-relaxed tracking-wide">
+                  "Olen Kokkolassa (1999) syntynyt, sittemmin rovaniemeläistynyt
                   kuvataideopettaja ja kuvataiteilija. Ikävöin merta ja ihailen
                   vaaramaisemia. Erityisesti rakastan kaikkea käsillä tekemistä,
                   retkeilyä ja kahvia. Onnellisimmillani olen oivalluksen
                   äärellä. Aloillani olen harvoin. Iloa saan erityisesti
-                  jaetuista hetkistä, taiteesta ja kauneudesta arjessa.{" "}
+                  jaetuista hetkistä, taiteesta ja kauneudesta arjessa."{" "}
                 </p>
               </article>
             </div>{" "}
@@ -106,7 +102,7 @@ export default function Home() {
               </ul>
             </div> */}
           </div>
-          <div className="pl-2 ">
+          <div className="mt-8 px-4">
             <h1 className="text-xl font-semibold">Ota yhteyttä</h1>
             <ul className="mt-4 flex flex-col gap-2">
               <li className="flex gap-4">
