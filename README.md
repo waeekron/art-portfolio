@@ -1,4 +1,4 @@
-Under work :)
+not ready :)
 
 ## About
 Art portfolio website for my friend.
